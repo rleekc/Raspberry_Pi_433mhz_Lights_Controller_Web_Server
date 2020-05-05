@@ -1,0 +1,88 @@
+<title>Backyard Lights</title>
+<body>
+<div style="margin:auto; width:1280px;">
+<h1 style="text-align:center;">Backyard Lights</h1>
+
+<!--
+<iframe src="http://rleekc.ddns.net/backyardvideo"
+	height="720"
+	width="1280"
+	frameborder="0"
+	scrolling="no"
+	align="middle"
+	style="margin: auto;"
+>
+</iframe>
+-->
+<!--
+<button type="button" onclick="turnon()" style="margin:auto;width:640px;height:180px"><h2>Ajax Turn On Lights</h2></button> 
+<button type="button" onclick="turnoff()" style="margin:auto;float:right;width:640px;height:180px"><h2>Ajax Turn Off Lights</h2></button> 
+-->
+<form action="/" style="margin: auto;width:1280px" method ="POST">
+
+  <button type="submit" style="margin: auto;width:640px;height:180px" name="password" value="on" >
+  <h2>Turn Lights ON</h2>
+  </button>
+  <button type="submit" style="margin: auto;float:right;width:640px;height:180px" name="password" value="off" >
+  <h2>Turn Lights OFF</h2>
+  </button>
+  <button type="submit" style="margin: auto;width:640px;height:180px" name="password" value="0.5H" >
+  <h2>Set Lights to 0.5H</h2>
+  </button>
+  <button type="submit" style="margin: auto;float:right;width:640px;height:180px" name="password" value="1H" >
+  <h2>Set Lights to 1H</h2>
+  </button>
+  <button type="submit" style="margin: auto;width:640px;height:180px" name="password" value="2H" >
+  <h2>Set Lights to 2H</h2>
+  </button>
+  <button type="submit" style="margin: auto;float:right;width:640px;height:180px" name="password" value="4H" >
+  <h2>Set Lights to 4H</h2>
+  </button>
+  <button type="submit" style="margin: auto;width:640px;height:180px" name="password" value="25%" >
+  <h2>Set Lights to 25%</h2>
+  </button>
+  <button type="submit" style="margin: auto;float:right;width:640px;height:180px" name="password" value="50%" >
+  <h2>Set Lights to 50%</h2>
+  </button>
+  <button type="submit" style="margin: auto;width:640px;height:180px" name="password" value="75%" >
+  <h2>Set Lights to 75%</h2>
+  </button>
+  <button type="submit" style="margin: auto;float:right;width:640px;height:180px" name="password" value="100%" >
+  <h2>Set Lights to 100%</h2>
+  </button>
+  <button type="submit" style="margin: auto;width:640px;height:180px" name="password" value="Dim -" >
+  <h2>Dim -</h2>
+  </button>
+  <button type="submit" style="margin: auto;float:right;width:640px;height:180px" name="password" value="Dim +" >
+  <h2>Dim +</h2>
+  </button>
+
+</form>
+
+
+<!-- <button type="button" onclick="turnon()" style="margin:auto;width:640px;height:180px"><h2>Ajax Turn On Lights</h2></button> 
+<button type="button" onclick="turnoff()" style="margin:auto;float:right;width:640px;height:180px"><h2>Ajax Turn Off Lights</h2></button>  -->
+
+{% if error %}
+        <h2 style="text-align:center;"> {{error}} </h2>
+{% endif %}
+
+ 
+<script>
+function turnon() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "/", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("password=on");
+}
+function turnoff() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "/", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("password=off");
+}
+</script>
+
+
+</div>
+</body>
