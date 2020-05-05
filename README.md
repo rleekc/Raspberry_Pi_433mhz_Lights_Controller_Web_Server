@@ -11,3 +11,4 @@ I had to use a faraday blanket to isolate the 433 mhz signal from the remote con
 
 The 433 mhz modules can be found here: https://www.amazon.com/gp/product/B07B9TVMW3/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 
+The light switch can be found here: https://www.amazon.com/gp/product/B07J4TPSM8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
